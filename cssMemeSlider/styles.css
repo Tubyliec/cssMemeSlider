@@ -9,35 +9,38 @@
 body {
     background: url("assets/images/wall.jpg");
     background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* General */
 
 .slider {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 5vh
 }
 
 .slider_wrapper {
-    width: 800px;
+    width: 50em;
     overflow: hidden;
-    border: 3px solid cornsilk;
+    border: 0.2em solid cornsilk;
     border-radius: 10px;
 }
 
 .slider_content {
     width: calc(100% * 4);
-    height: 500px;
+    height: 30em;
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 
 .slide {
-    height: 500px;
+    height: 30em;
     width: calc(100% * 4);
 }
 
@@ -52,34 +55,35 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 800px;
+    width: 50em;
 }
 
 .control {
     justify-content: center;
     display: flex;
+    gap: 0.5em;
 }
 
 .dot {
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
     cursor: pointer;
     
 }
 
 .dot:active .pointer{
     background-color: #55cf96;
-    border: 3px solid cornsilk;
+    border: 0.2em solid cornsilk;
 }
 
 .pointer {
-    height: 20px;
-    width: 20px;
+    height: 1em;
+    width: 1em;
     border-radius: 50%;
     cursor: pointer;
     display: block;
     background: cornsilk;
-    border: 3px solid transparent;
+    border: 0.2em solid transparent;
 }
 
 .pointer:hover {
@@ -102,12 +106,9 @@ body {
     width: calc(100% * 4);
 }
 
-h1, p {
-    color: cornsilk;
-}
-
 p {
     font-size: larger;
+    color: cornsilk;
 }
 
 /* Switching */
@@ -137,7 +138,7 @@ p {
 #switch3:checked ~ .wrapper .slider_control .control .dot:nth-child(3) .pointer,
 #switch4:checked ~ .wrapper .slider_control .control .dot:nth-child(4) .pointer {
     background-color: #55cf96;
-    border: 3px solid cornsilk;
+    border: 0.2em solid cornsilk;
 }
 
 #switch1:checked ~ .wrapper .slider_control .control .dot:nth-child(1) .pointer:hover,
@@ -145,6 +146,58 @@ p {
 #switch3:checked ~ .wrapper .slider_control .control .dot:nth-child(3) .pointer:hover,
 #switch4:checked ~ .wrapper .slider_control .control .dot:nth-child(4) .pointer:hover {
     background-color: cornsilk;
-    border: 3px solid #55cf96;
+    border: 0.2em solid #55cf96;
 }
 
+
+/* Media */
+
+
+@media (max-width:500px) {
+
+    .slider_wrapper {
+        width: 18em;
+        height: 15em;
+    }
+
+    .slider_content {
+        width: 18em;
+        height: 15em;
+    }
+    .slide {
+        width: 18em;
+        height: 15em;
+    }
+
+    .slider_control {
+        width: 18em;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+@media (min-width:500.99px) and (max-width:970px) {
+
+    .slider_wrapper {
+        width: 30em;
+        height: 20em;
+    }
+
+    .slider_content {
+        width: 30em;
+        height: 20em;
+    }
+    .slide {
+        width: 30em;
+        height: 20em;
+    }
+
+    .slider_control {
+        width: 30em;
+    }
+}

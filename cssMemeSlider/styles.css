@@ -171,7 +171,7 @@ p {
 
     .slider_control {
         width: 18em;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         gap: 1em;
     }

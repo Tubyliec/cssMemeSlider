@@ -28,7 +28,7 @@ body {
     width: 50em;
     overflow: hidden;
     border: 0.2em solid cornsilk;
-    border-radius: 10px;
+    border-radius: 1em;
 }
 
 .slider_content {
